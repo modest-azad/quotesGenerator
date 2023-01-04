@@ -11,25 +11,26 @@
   </head>
   <body>
     <div class="container">
-      <h1 id="text">WELCOME TO MOTIVATION POINT</h1>
+      <h1 id="text">Success is the sum of small efforts, repeated.</h1>
       <br>
     </div>
-    <center>
-        <button onclick="show()">click me</button>
-    </center>
-    
-    <p>designed and developed by <a href="https://www.instagram.com/mdazad2.0/">@mdazad2.0</a></p>
+       
+    <p>[automatic quotes generator <br> designed and developed by <a href="https://www.instagram.com/mdazad2.0/">@mdazad2.0</a></p>
     
   </body>
 </html>
 
 <style>
   html{
-      background-color:aliceblue;
+      background-color:#283593;
+     
   }
  
  h1,p{
       text-align: center;
+      color:#E8EAF6;
+      font-size:12px;
+      font-family:'sabir mono'
   }
 .container {
   
@@ -40,10 +41,12 @@
   align-items: center;
 
   height:60vh;
-  width:95%;
 }
 h1{
   text-align:center;
+  font-size:4rem;
+  line-height: 4rem;
+  font-family:'poppins','sf pro display';
 }
 h1::before{
   content:"'' "
@@ -52,14 +55,16 @@ h1::after{
   content:"'' "
 }
 button{
-  font-size:24px;
   padding:20px 40px;
   border-radius:20px;
-  background-color: rgb(202, 230, 255);
-  border:1px solid rgb(122, 190, 250);
+  background-color: rgb(215, 216, 216);
+  border:0.5px solid #1d1d1d;;
 }
 button:active{
   background-color: rgb(122, 190, 250);
+}
+a{
+  color: white;
 }
 </style>
 
@@ -92,9 +97,17 @@ button:active{
     "Learn from yesterday. Live for today. Hope for tomorrow.",
     "The more that you read, the more things you will know, the more that you learn, the more places you'll go.",
   ];
+
+  let count = document.getElementById('count');
+  let i =  0;
+  let time = 5000;
+  let reset = 0;
   
-function show(){
-      text.innerHTML = motivations[ Math.floor(Math.random()*10)];
-  }
+setInterval(()=>{
+  
+    text.innerHTML = motivations[ Math.floor(Math.random()*10)];
+
+
+},time);
 
 </script>
